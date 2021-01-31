@@ -4,7 +4,7 @@
 #  Video Number: #02
 #
 # Assign numeric values to three variables
-x <- 1
+x <- 1 
 y <- 2
 z <- 3
 #

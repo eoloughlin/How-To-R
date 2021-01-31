@@ -3,7 +3,7 @@
 #   Video Title: How To... Perform Coercion in R
 #  Video Number: #22
 #
-x <- 1.234            # create a numeric vector
+x <- 1.234            # Create a numeric vector
 #
 class(x)              # Check data type
 #
@@ -13,10 +13,13 @@ as.numeric(x)         # Coerce to numeric
 as.integer(x)         # Coerce to an integer
 as.logical(x)         # Coerce to logical
 #
+# Store result in new vector
+y <- as.integer(x)
+#
 # If a coercion works, you get what you expect
-as.numeric("1.234")
-as.integer("1.234")
-as.character(1.234)
+as.numeric("5.678")
+as.integer("5.678")
+as.character(5.678)
 #
 # When coercion does not work, you get "NA"
 as.numeric("Hello")

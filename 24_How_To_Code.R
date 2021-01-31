@@ -5,6 +5,7 @@
 #     Data File: 24_Data_File.csv
 #
 # Read file from URL and store in a vector
+# https://raw.githubusercontent.com/eoloughlin/How-To-R/master/24_Data_File.csv
 priceData <- read.csv("https://raw.githubusercontent.com/eoloughlin/How-To-R/master/24_Data_File.csv")
 #
 # Check file read correctly
