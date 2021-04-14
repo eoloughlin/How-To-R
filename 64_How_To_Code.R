@@ -1,19 +1,20 @@
 #
 #          Author: Dr Eugene O'Loughlin
-#     Video Title: How To... Edit a Data Frame in R
+#     Video Title: How To... Combine Two Data Frames in R
 #    Video Number: #64
-# Data Files Used: 64_Data_File.csv
+# Data Files Used: 64a_Data_File.csv, and 64b_Data_File.csv
 #
-# Load data file (Source: www.weather.com)
+# Load data files (Source: www.weather.com)
 #
-# Read in weather file
-weather <- read.csv("64_Data_File.csv", header = TRUE, sep = ",")
-print(weather)
+# Read in two weather file
+MarchWeather <- read.csv("64a_Data_File.csv", header = TRUE, sep = ",")
+print(MarchWeather)
+AprilWeather <- read.csv("64b_Data_File.csv", header = TRUE, sep = ",")
+print(AprilWeather)
 #
-edit(weather)              # Change a value
-print(weather)             # But any changes made not saved
+rbind(MarchWeather, AprilWeather)    # Combines and displays new data frame
 #
-weather <- edit(weather)   # Edit and Update data frame
-#
-print(weather)             # Data frame now updated
+# Create a new data frame
+newWeather <- rbind(MarchWeather, AprilWeather)
+print(newWeather)
 #

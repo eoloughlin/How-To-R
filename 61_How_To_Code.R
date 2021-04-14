@@ -1,22 +1,22 @@
 #
 #          Author: Dr Eugene O'Loughlin
-#     Video Title: How To... Select Data Frame Columns by Name in R
+#     Video Title: How To... Add a Column to a Data Frame in R
 #    Video Number: #61
-#  Data File Used: 61_Data_File.csv
+# Data Files Used: 61a_Data_File.csv, and 61b_Data_File.csv
 #
 # Load data file (Source: www.weather.com)
 #
 # Read in weather file
-weather <- read.csv("61_Data_File.csv", header = TRUE, sep = ",")
+weather <- read.csv("61a_Data_File.csv", header = TRUE, sep = ",")
 print(weather)
 #
-weather[ , 2]   # Columns can be refered to by number
+wind <- read.csv("61b_Data_File.csv", header = TRUE, sep = ",")
+print(wind)
 #
-# Check column names
-names(weather)
+newWeather <- cbind(weather, wind$Wind.Speed)
+print(newWeather)
 #
-# Display "Conditions" Column
-weather["Conditions"]
+# Rename "wind$Wind.Speed" to "Wind.Speed"
+names(newWeather)[names(newWeather) == "wind$Wind.Speed"] <- "Wind.Speed"
+print(newWeather)
 #
-# Display "High Temp" and "Low Temp" only
-weather[c("High.Temp", "Low.Temp")]

@@ -15,12 +15,14 @@ print(weather)
 #    Low Temperature = 2
 #         Conditions = Rain
 #
-# Creat a data frame for new date (one row)
+# Create a data frame for new date (one row)
 newRow <- data.frame(Date = "11-Apr-2021", 
                      High.Temp = 8, 
                      Low.Temp = 2, 
                      Conditions = "Rain")
 #
+# Display "newRow" data frame
+print(newRow)
 # Bind "newRow" data frame to "weather" data frame
 weather <- rbind(weather, newRow)
 print(weather)
