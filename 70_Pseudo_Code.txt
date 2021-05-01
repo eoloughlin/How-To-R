@@ -1,0 +1,13 @@
+Pseudocode to create a dataframe:
+
+Use "function()" to set up new function called "basicStats"
+
+Create titles for row names
+
+Use data.frame() to create a dataframe with five rows
+
+Use names() to assign column name
+
+Calculate statistics and assign to new dataframe
+
+Display dataframe

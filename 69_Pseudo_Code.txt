@@ -1,0 +1,13 @@
+Pseudocode to create a matrix:
+
+Use "function()" to set up new function called "basicStats"
+
+Use "matrix()" to create a matrix of one row and five columns
+
+Use "colnames()" to create columns names
+
+Use "rownames()" to create row name
+
+Calculate statistics and assign to new matrix
+
+Display matrix
