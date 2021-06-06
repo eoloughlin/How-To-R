@@ -21,7 +21,7 @@ print(aluLevels)
 shapiro.test(aluLevels$August)     # p > 0.05, data are normal
 shapiro.test(aluLevels$November)   # p < 0.05, data are not normal
 #
-# Perform Mann-Whitney Test using "wilcox.test()" function
+# Perform Wilcoxon Test using "wilcox.test()" function
 wilcox.test(aluLevels$August, aluLevels$November, paired =  TRUE)
 #
 # Repeat test and swap variables
