@@ -25,7 +25,7 @@ shapiro.test(sprayData$Type.E)
 shapiro.test(sprayData$Type.F)
 #
 # Visualise
-boxplot(sprayData)
+boxplot(sprayData)``
 #
 # run K-W test
 #
