@@ -28,5 +28,5 @@ wilcox.test(movieRating$Female, movieRating$Male, paired = FALSE)
 #
 #     Report: U = 144.5, p = 0.137
 #   Decision: Fail to reject Null Hypothesis
-# Conclusion: No difference in rating ranks betwen Males and Females
+# Conclusion: No difference in rating ranks between Males and Females
 #
