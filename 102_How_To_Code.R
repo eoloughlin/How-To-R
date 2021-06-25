@@ -1,7 +1,7 @@
 #
 #          Author: Dr Eugene O'Loughlin
-#     Video Title: How To... Create a Multiple Linear Regression Model in R
-#    Video Number: #101
+#     Video Title: How To... Make a Prediction using a Multiple Linear Regression Model in R
+#    Video Number: #102
 #
 # Load Marketing Data Set from datarium package
 library(datarium)
@@ -15,15 +15,23 @@ head(marketing)
 # Check for multicollinearity
 cor(marketing, method = "pearson")   # none found
 #
-# Create model using all three independent variables
+# Create model 
 salesModel <- lm(sales ~ youtube + facebook + newspaper, data = marketing)
-summary(salesModel)
-#
-# Create model leaving out "newspaper" independent variable
-salesModel <- lm(sales ~ youtube + facebook, data = marketing)
 summary(salesModel)
 #
 # Model can be written as: 
 # 
-# sales = 3.5 + 0.045 * youtube + 0.187 * facebook
+# sales = 3.526667 + 0.045765 * youtube + 0.188530 * facebook - 0.001037 * newspaper
 #
+# Manual Prediction
+youtube <- 100
+facebook <- 50
+newspaper <- 75
+#
+sales <- 3.526667 + 0.045765 * youtube + 0.188530 * facebook - 0.001037 * newspaper
+print(sales)
+#
+# What are predicted values for each of the 200 Sales figures?
+predict(salesModel)
+#
+predict(salesModel, data.frame(youtube = 100, facebook = 50, newspaper = 75))
